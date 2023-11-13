@@ -1,7 +1,7 @@
 import { Button, Stack, Typography } from "@mui/material";
 import { useState } from "react";
 import { Link } from "react-router-dom";
-import useElectronApi from "../hooks/useElectronApi";
+import useElectronApi from "@hooks/useElectronApi";
 
 function Header() {
   const [count, setCount] = useState(0);
