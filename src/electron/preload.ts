@@ -3,7 +3,7 @@
 
 import { contextBridge, ipcRenderer } from "electron";
 
-const api = {
+export const api = {
   ping: () => ipcRenderer.invoke("ping"),
   sendMessage: (message: string) => ipcRenderer.invoke("message", message),
 };
