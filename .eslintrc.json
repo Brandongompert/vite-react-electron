@@ -22,7 +22,8 @@
         "map": [
           ["@components", "./src/components"],
           ["@hooks", "./src/hooks"],
-          ["@pages", "./src/pages"]
+          ["@pages", "./src/pages"],
+          ["@utils", "./src/utils"]
           // Add more aliases as needed
         ],
         "extensions": [".js", ".jsx", ".ts", ".tsx", ".json"]
