@@ -1,5 +1,6 @@
 import { app, BrowserWindow, ipcMain } from "electron";
 import path from "path";
+import startServer from "../api/server";
 interface Handler {
   channel?: string;
   listener: (event: Electron.IpcMainInvokeEvent, ...args: any[]) => any;
@@ -65,6 +66,7 @@ const createWindow = () => {
 // initialization and is ready to create browser windows.
 // Some APIs can only be used after this event occurs.
 app.on("ready", async () => {
+  await startServer();
   setHandlers(handlers);
   createWindow();
 });
