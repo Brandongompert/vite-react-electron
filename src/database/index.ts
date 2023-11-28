@@ -7,11 +7,11 @@ import postgres from "postgres";
 // migrate(drizzle(migrationClient))
 
 const queryClient = postgres({
-  host: "localhost", // Postgres ip address[s] or domain name[s]
-  port: 5432, // Postgres server port[s]
-  database: "postgres", // Name of database to connect to
-  username: "postgres", // Username of database user
-  password: "Element911!", // Password of database user
+  host: process.env.DB_HOST, // Postgres ip address[s] or domain name[s]
+  port: process.env.DB_PORT as unknown as number, // Postgres server port[s]
+  database: process.env.DB_NAME, // Name of database to connect to
+  username: process.env.DB_USER, // Username of database user
+  password: process.env.DB_PASSWORD, // Password of database user
 });
 
 console.log("queryClient", queryClient);
