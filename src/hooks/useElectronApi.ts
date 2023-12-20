@@ -1,4 +1,7 @@
-// useApi.js
+// ********************************************************
+// don't use this if you can use util/isElectron.ts instead
+// ********************************************************
+
 import { useEffect, useState } from "react";
 
 function useElectronApi() {
