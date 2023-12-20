@@ -23,7 +23,8 @@
           ["@components", "./src/components"],
           ["@hooks", "./src/hooks"],
           ["@pages", "./src/pages"],
-          ["@utils", "./src/utils"]
+          ["@utils", "./src/utils"],
+          ["@database", "./src/database"]
           // Add more aliases as needed
         ],
         "extensions": [".js", ".jsx", ".ts", ".tsx", ".json"]
