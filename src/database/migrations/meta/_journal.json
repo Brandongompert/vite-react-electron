@@ -1,12 +1,12 @@
 {
   "version": "5",
-  "dialect": "pg",
+  "dialect": "mysql",
   "entries": [
     {
       "idx": 0,
       "version": "5",
-      "when": 1700582714986,
-      "tag": "0000_conscious_omega_red",
+      "when": 1703087954621,
+      "tag": "0000_solid_quentin_quire",
       "breakpoints": true
     }
   ]

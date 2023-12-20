@@ -10,8 +10,10 @@
     "make": "electron-forge make",
     "publish": "electron-forge publish",
     "lint": "eslint --ext .ts,.tsx .",
-    "db:push": "drizzle-kit push:pg",
-    "db:generate": "drizzle-kit generate:pg"
+    "db:generate": "drizzle-kit generate:mysql",
+    "db:push": "drizzle-kit push:mysql",
+    "db:pull": "drizzle-kit introspect:mysql",
+    "db:check": "drizzle-kit check:mysql"
   },
   "keywords": [],
   "author": {
@@ -46,9 +48,9 @@
     "@emotion/react": "^11.11.1",
     "@emotion/styled": "^11.11.0",
     "@mui/material": "^5.14.17",
-    "drizzle-orm": "^0.29.0",
+    "drizzle-orm": "^0.29.1",
     "electron-squirrel-startup": "^1.0.0",
-    "postgres": "^3.4.3",
+    "mysql2": "^3.6.5",
     "react": "^18.2.0",
     "react-dom": "^18.2.0",
     "react-router-dom": "^6.18.0"

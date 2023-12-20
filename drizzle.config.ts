@@ -1,10 +1,12 @@
-import "dotenv/config";
+import * as dotenv from "dotenv";
 import type { Config } from "drizzle-kit";
+
+dotenv.config();
 
 export default {
   schema: "./src/database/schema.ts",
   out: "./src/database/migrations",
-  driver: "pg", // 'pg' | 'mysql2' | 'better-sqlite' | 'libsql' | 'turso'
+  driver: "mysql2", // 'pg' | 'mysql2' | 'better-sqlite' | 'libsql' | 'turso'
   dbCredentials: {
     host: process.env.DB_HOST as string,
     user: process.env.DB_USER,

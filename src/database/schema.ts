@@ -1,9 +1,13 @@
-import { pgTable, serial, varchar } from "drizzle-orm/pg-core";
+import { int, text, mysqlTable } from "drizzle-orm/mysql-core";
 
-// manage your schema
-
-export const users = pgTable("users", {
-  id: serial("id").primaryKey(),
-  name: varchar("name", { length: 256 }),
+export const users = mysqlTable("users", {
+  id: int("id").primaryKey().autoincrement(),
+  name: text("name"),
 });
 export type User = typeof users.$inferSelect; // return type when queried
+
+export const assets = mysqlTable("assets", {
+  id: int("id").primaryKey().autoincrement(),
+  name: text("name"),
+});
+export type Asset = typeof assets.$inferSelect; // return type when queried
