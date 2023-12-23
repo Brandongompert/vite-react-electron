@@ -5,10 +5,12 @@ async function createUser(req: any, res: any) {
   const db = await getDbInstance();
 
   try {
-    db.insert(users).values({
-      name: req.body.name,
-    });
-    res.send("User created successfully");
+    db.insert(users)
+      .values({
+        name: req.body.data.name,
+      })
+      .execute();
+    res.send(`User ${req.body.data.name} created!`);
   } catch (error) {
     console.log("Error creating user:  ", error);
     res.send("Error creating user");
