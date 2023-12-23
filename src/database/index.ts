@@ -1,10 +1,11 @@
 import { drizzle } from "drizzle-orm/mysql2";
 import mysql from "mysql2/promise";
 import dotenv from "dotenv";
+import { MySqlDatabase } from "drizzle-orm/mysql-core";
 
 dotenv.config();
 
-let dbPromise: Promise<any> | null = null; // Store the Promise
+let dbPromise: Promise<MySqlDatabase<any, any, any, any>> | null = null; // Store the Promise
 
 async function setupDatabaseConnection() {
   try {
