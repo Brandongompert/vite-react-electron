@@ -2,11 +2,14 @@ import { Router } from "express";
 import createUser from "./createUser";
 import updateUser from "./updateUser";
 import deleteUser from "./deleteUser";
+import getUserById from "./getUserById";
 
 export const usersRouter = Router();
 
 // GET
-usersRouter.get("/", (req, res) => res.send("list users request"));
+usersRouter.get("/:id", async (req, res) => {
+  await getUserById(req, res);
+});
 
 // PUT
 usersRouter.put("/", async (req, res) => {

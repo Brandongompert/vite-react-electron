@@ -5,8 +5,6 @@ import { MySqlDatabase } from "drizzle-orm/mysql-core";
 
 dotenv.config();
 
-let dbPromise: Promise<MySqlDatabase<any, any, any, any>> | null = null; // Store the Promise
-
 async function setupDatabaseConnection() {
   try {
     // Create a MySQL connection
@@ -32,6 +30,8 @@ async function setupDatabaseConnection() {
     // Handle the error appropriately
   }
 }
+let dbPromise: Promise<MySqlDatabase<any, any, any, any>> | null = null; // Store the Promise
+
 // Function to initialize and return the database instance as a Promise
 export async function getDbInstance() {
   if (!dbPromise) {
