@@ -1020,6 +1020,25 @@
   dependencies:
     defer-to-connect "^2.0.0"
 
+"@tanstack/eslint-plugin-query@^5.14.6":
+  version "5.14.6"
+  resolved "https://registry.yarnpkg.com/@tanstack/eslint-plugin-query/-/eslint-plugin-query-5.14.6.tgz#aef5cabe5a4e156a81f5522c0874f826f71da953"
+  integrity sha512-vpowwoGoB9JgZy8fljf53ZTW2yYLRQ3Tjx4WQFKxiKugQOctxaTjQk7wlYzuqA/gjzfPL9qHfKW5DTT9CmIpkA==
+  dependencies:
+    "@typescript-eslint/utils" "^5.62.0"
+
+"@tanstack/query-core@5.15.5":
+  version "5.15.5"
+  resolved "https://registry.yarnpkg.com/@tanstack/query-core/-/query-core-5.15.5.tgz#4e2b065abce6c7e9a00b2e5441c93c9762273646"
+  integrity sha512-GDwVfu8RPswqVu27+zuIkZINru6CN++zzBbBK+OnAgzxK8N4Obdi+sG2P0EO8rJAOw0fLyQTsO4GCZ1djwaUCg==
+
+"@tanstack/react-query@^5.15.5":
+  version "5.15.5"
+  resolved "https://registry.yarnpkg.com/@tanstack/react-query/-/react-query-5.15.5.tgz#c8709de9fc28b0caa6aed4f70fefbf0f116d991d"
+  integrity sha512-JSPpzsJPqpNySgjMhAvBpF3gVhtlI/0bZrBmwmcD/ewYYOExll+tIz13gkgnCfNA1qTJQnbv7vdc2gw594vq9Q==
+  dependencies:
+    "@tanstack/query-core" "5.15.5"
+
 "@tootallnate/once@2":
   version "2.0.0"
   resolved "https://registry.npmjs.org/@tootallnate/once/-/once-2.0.0.tgz"
@@ -1326,7 +1345,7 @@
     semver "^7.3.7"
     tsutils "^3.21.0"
 
-"@typescript-eslint/utils@5.62.0":
+"@typescript-eslint/utils@5.62.0", "@typescript-eslint/utils@^5.62.0":
   version "5.62.0"
   resolved "https://registry.npmjs.org/@typescript-eslint/utils/-/utils-5.62.0.tgz"
   integrity sha512-n8oxjeb5aIbPFEtmQxQYOLI0i9n5ySBEY/ZEHHZqKQSFnxio1rv6dthascc9dLuwrL0RC5mPCxB7vnAVGAYWAQ==

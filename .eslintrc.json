@@ -16,6 +16,7 @@
     "plugin:import/typescript"
   ],
   "parser": "@typescript-eslint/parser",
+  "plugins": ["@tanstack/query"],
   "settings": {
     "import/resolver": {
       "alias": {
