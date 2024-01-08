@@ -41,8 +41,7 @@ instance.interceptors.response.use(
 );
 
 function handleError(error: AxiosError) {
-  const { config, response } = error;
-  const originalRequest = config;
+  const { response } = error;
 
   switch (response?.status) {
     case StatusCode.InternalServerError: {
