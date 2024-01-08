@@ -29,9 +29,7 @@ const ApiBaseUrl = `${import.meta.env.VITE_SERVER_URL}/`;
 
 const instance = axios.create({
   baseURL: ApiBaseUrl,
-  headers: {
-    "Bypass-Tunnel-Reminder": "true",
-  },
+  headers: {},
 });
 
 instance.interceptors.response.use(

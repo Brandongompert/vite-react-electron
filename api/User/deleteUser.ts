@@ -10,7 +10,7 @@ const deleteUser = async (req: Request, res: Response) => {
 
   try {
     db.delete(users).where(eq(users.id, userId)).execute();
-    res.status(200).json(`User ${req.body.name} deleted!`);
+    res.status(200).json(`User successfully deleted!`);
   } catch (error) {
     console.log("Error deleting user:  ", error);
     res.status(500).json(`Error deleting user:  ${error}`);
