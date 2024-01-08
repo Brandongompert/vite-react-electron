@@ -17,9 +17,11 @@
       "@hooks/*": ["./src/hooks/*"],
       "@pages/*": ["./src/pages/*"],
       "@utils/*": ["./src/utils/*"],
-      "@database/*": ["./src/database/*"]
+      "@database/*": ["./database/*"],
+      "@api/*": ["./api/*"],
+      "@services/*": ["./src/services/*"]
     }
   },
 
-  "include": ["src"]
+  "include": ["src", "api", "database"]
 }

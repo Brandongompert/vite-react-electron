@@ -25,7 +25,9 @@
           ["@hooks", "./src/hooks"],
           ["@pages", "./src/pages"],
           ["@utils", "./src/utils"],
-          ["@database", "./src/database"]
+          ["@database", "./database"],
+          ["@api", "./api"],
+          ["@services", "./src/services"]
           // Add more aliases as needed
         ],
         "extensions": [".js", ".jsx", ".ts", ".tsx", ".json"]

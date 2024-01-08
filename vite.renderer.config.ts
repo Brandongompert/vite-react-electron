@@ -8,6 +8,8 @@ export default defineConfig({
       "@pages": "/src/pages/",
       "@hooks": "/src/hooks/",
       "@utils": "/src/utils/",
+      "@api": "/api/",
+      "@services": "/src/services/",
     },
   },
 });
