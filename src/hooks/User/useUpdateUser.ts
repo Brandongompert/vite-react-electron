@@ -1,14 +1,23 @@
-import useApi from "@hooks/useApi";
+import { UserService } from "@services/UserService";
+import { queryKeys } from "@services/queryKeyStore";
+import { useMutation, useQueryClient } from "@tanstack/react-query";
 
-const useUpdateUser = async (userData: any) => {
-  return useApi({
-    method: "get",
-    url: `http://localhost:3001/users/${userData.id}`,
-    headers: {
-      "Content-Type": "application/json",
+const updateUser = (data: any) =>
+  UserService.put(`/${data.id}`, data).then((res) => res.data);
+
+const useUpdateUser = () => {
+  const queryClient = useQueryClient();
+  return useMutation({
+    mutationFn: (data: { name: string }) => {
+      console.log("data in hook:  ", data);
+      return updateUser(data);
     },
-    cache: userData,
-    body: userData,
+    onSuccess: (data) => {
+      queryClient.invalidateQueries({ queryKey: queryKeys.users.list._def });
+      queryClient.invalidateQueries({
+        queryKey: queryKeys.users.detail(data.id).queryKey,
+      });
+    },
   });
 };
 

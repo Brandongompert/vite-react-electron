@@ -1,14 +1,17 @@
-import useApi from "@hooks/useApi";
+import { useMutation, useQueryClient } from "@tanstack/react-query";
+import { UserService } from "@services/UserService";
+import { queryKeys } from "@services/queryKeyStore";
 
-const useCreateUser = async (userData: any) => {
-  return useApi({
-    method: "post",
-    url: `http://localhost:3001/users/${userData.id}`,
-    headers: {
-      "Content-Type": "application/json",
+const createUser = (data: any) =>
+  UserService.post("/", data).then((res) => res.data);
+
+const useCreateUser = () => {
+  const queryClient = useQueryClient();
+  return useMutation({
+    mutationFn: (data: { name: string }) => createUser(data),
+    onSuccess: () => {
+      queryClient.invalidateQueries({ queryKey: queryKeys.users.list._def });
     },
-    cache: userData,
-    body: userData,
   });
 };
 

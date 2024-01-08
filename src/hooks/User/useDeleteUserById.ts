@@ -1,13 +1,17 @@
-import useApi from "@hooks/useApi";
+import { UserService } from "@services/UserService";
+import { queryKeys } from "@services/queryKeyStore";
+import { useMutation, useQueryClient } from "@tanstack/react-query";
 
-const useDeleteUserById = async (userId: number) => {
-  return useApi({
-    method: "delete",
-    url: `http://localhost:3001/users/${userId}`,
-    headers: {
-      "Content-Type": "application/json",
+const deleteUser = (userId: number) =>
+  UserService.delete(`/${userId}`).then((res) => res.data);
+
+const useDeleteUserById = () => {
+  const queryClient = useQueryClient();
+  return useMutation({
+    mutationFn: (userId: number) => deleteUser(userId),
+    onSuccess: () => {
+      queryClient.invalidateQueries({ queryKey: queryKeys.users.list._def });
     },
-    cache: userId,
   });
 };
 
