@@ -4,7 +4,6 @@ import { eq } from "drizzle-orm";
 import { Request, Response } from "express";
 
 async function getUserById(req: Request, res: Response) {
-  console.log("req.params:", req.params);
   const db = await getDbInstance();
 
   try {

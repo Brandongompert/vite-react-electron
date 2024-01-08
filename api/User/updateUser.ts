@@ -5,16 +5,17 @@ import { Request, Response } from "express";
 
 async function updateUser(req: Request, res: Response) {
   const db = await getDbInstance();
-  const userId = req.body.data.id;
+
+  const userId = req.body.id;
 
   try {
     db.update(users)
       .set({
-        name: req.body.data.name,
+        name: req.body.name,
       })
       .where(eq(users.id, userId))
       .execute();
-    res.status(200).json(`User ${req.body.data.name} updated!`);
+    res.status(200).json(`User ${req.body.name} updated!`);
   } catch (error) {
     console.log("Error updating user:  ", error);
     res.status(500).json(`Error updating user:  ${error}`);

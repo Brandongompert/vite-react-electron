@@ -3,6 +3,7 @@ import createUser from "./createUser";
 import updateUser from "./updateUser";
 import deleteUser from "./deleteUser";
 import getUserById from "./getUserById";
+import listUsers from "./listUsers";
 
 export const usersRouter = Router();
 
@@ -10,9 +11,12 @@ export const usersRouter = Router();
 usersRouter.get("/:id", async (req, res) => {
   await getUserById(req, res);
 });
+usersRouter.get("/", async (req, res) => {
+  await listUsers(req, res);
+});
 
 // PUT
-usersRouter.put("/", async (req, res) => {
+usersRouter.put("/:id", async (req, res) => {
   await updateUser(req, res);
 });
 
@@ -22,6 +26,6 @@ usersRouter.post("/", async (req, res) => {
 });
 
 // DELETE
-usersRouter.delete("/", async (req, res) => {
+usersRouter.delete("/:id", async (req, res) => {
   await deleteUser(req, res);
 });
