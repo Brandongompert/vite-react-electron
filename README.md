@@ -17,7 +17,6 @@ A comprehensive boilerplate designed to kickstart your development with a blend 
 
 ### Database:
 
-- MySQL
 - Drizzle ORM
 - Drizzle-Kit
 
@@ -30,6 +29,7 @@ A comprehensive boilerplate designed to kickstart your development with a blend 
 ## Table of Contents
 
 - [Installation](#installation)
+- [Usage](#usage)
 
 ## Installation
 
@@ -48,3 +48,8 @@ To get started with this boilerplate:
    yarn       # Installs all necessary dependencies
    yarn start # Launches the project
    ```
+
+## Usage
+
+The electron app should launch automatically and be available in a seperate window.  
+If you would like to access the web app, it will be available at: http://localhost:5173
