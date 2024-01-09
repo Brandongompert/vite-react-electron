@@ -17,6 +17,7 @@ A comprehensive boilerplate designed to kickstart your development with a blend 
 
 ### Database:
 
+- MySQL
 - Drizzle ORM
 - Drizzle-Kit
 
