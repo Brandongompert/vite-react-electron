@@ -6,25 +6,25 @@ A comprehensive boilerplate designed to kickstart your development with a blend 
 
 ### Front-End:
 
-- React with Typescript
-- Electron
-- React-Query
+- React with Typescript - https://react.dev/
+- Electron - https://www.electronjs.org/docs/latest
+- React-Query - https://tanstack.com/query/v4/docs/react/overview
 
 ### Back-End:
 
-- Node.js using Typescript
-- Express
+- Node.js using Typescript - https://nodejs.org/docs/latest/api/
+- Express - https://expressjs.com/
 
 ### Database:
 
-- Drizzle ORM
-- Drizzle-Kit
+- Drizzle ORM - https://orm.drizzle.team/docs/overview
+- Drizzle-Kit - https://orm.drizzle.team/kit-docs/overview
 
 ### Tools:
 
-- Vite
-- Electron Forge
-- Yarn
+- Vite - https://vitejs.dev/
+- Electron Forge - https://www.electronforge.io/
+- Yarn - https://yarnpkg.com/getting-started
 
 ## Table of Contents
 
